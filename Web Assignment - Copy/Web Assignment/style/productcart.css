@@ -1,0 +1,156 @@
+body {
+    background-color: #f1ebdf;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    margin: 0;
+    padding: 0;
+    font-family: tenali ramakrishna;
+    font-size: 20px;
+}
+
+li {
+    list-style: none;
+
+}
+
+a {
+    text-decoration: none;
+    color: #964414;
+    font-size: 1.5rem;
+
+
+}
+
+a:hover {
+    color: #c67c51;
+    cursor: pointer;
+}
+/* HEADER */
+header {
+    position: absolute;
+
+}
+.navbar {
+    width: 100%;
+    height: 60px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    background-color: #f6ccc7;
+    margin: 0%;
+    padding: 0%;
+
+}
+.navbar .logo a {
+    font-size: 2rem;
+    font-weight: bold;
+    font-family: 'titan one';
+    margin-left: 10px;
+
+}
+.navbar .links {
+   display: flex;
+   position: relative;
+    gap: 4rem;
+    font-family: 'titan one';
+    top: 5px;
+   margin-left: auto;
+   margin-right: 28%;
+}
+.navbar .toggle_btn {
+    color: #bd6a34;
+    cursor: pointer;
+    display: none;
+
+}
+.profile_btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px; /* small spacing from links */
+    font-size: 20px;
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.profile_btn:hover {
+    color: #ff6b81; 
+}
+
+.profile_btn i {
+    background: #f5f5f5;
+    padding: 8px;
+    border-radius: 50%;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+}
+.cart-container {
+      max-width: 900px;
+      margin-top: 90px ;
+      margin-left: auto;
+      margin-right: auto;
+      background: #fff;
+      padding: 10px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    h2 {
+      text-align: center;
+      margin-bottom: 10px;
+      color:#000000;
+      font-size: 40px;
+      font-weight: bold;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    table th, table td {
+      border: 1px solid #ddd;
+      padding: 10px;
+      text-align: center;
+    }
+    table th {
+      background: #f4f4f4;
+    }
+    input[type="number"] {
+      width: 60px;
+      padding: 5px;
+      text-align: center;
+    }
+    .total {
+      text-align: right;
+      font-size: 18px;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+    .btn {
+      background: #4CAF50;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 15px;
+      font-size: 16px;
+      display: block;
+      width: 100%;
+    }
+    .btn:hover {
+      background: #45a049;
+    }
+    .remove-btn {
+      background: #e74c3c;
+      color: white;
+      border: none;
+      padding: 6px 12px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .remove-btn:hover {
+      background: #c0392b;
+    }

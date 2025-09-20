@@ -1,0 +1,277 @@
+body {
+    background-color: #f1ebdf;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    margin: 0;
+    padding: 0;
+    font-family: tenali ramakrishna;
+    font-size: 20px;
+}
+
+li {
+    list-style: none;
+
+}
+
+a {
+    text-decoration: none;
+    color: #964414;
+    font-size: 1.5rem;
+
+
+}
+
+a:hover {
+    color: #c67c51;
+    cursor: pointer;
+}
+
+/* HEADER */
+header {
+    position: absolute;
+
+}
+.navbar {
+    width: 100%;
+    height: 60px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    background-color: #f6ccc7;
+    margin: 0%;
+    padding: 0%;
+
+}
+.navbar .logo a {
+    font-size: 2rem;
+    font-weight: bold;
+    font-family: 'titan one';
+    margin-left: 10px;
+
+}
+.navbar .links {
+   display: flex;
+   position: relative;
+    gap: 4rem;
+    font-family: 'titan one';
+    top: 5px;
+   margin-left: auto;
+   margin-right: 28%;
+}
+.navbar .toggle_btn {
+    color: #bd6a34;
+    cursor: pointer;
+    display: none;
+
+}
+.profile_btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px; /* small spacing from links */
+    font-size: 20px;
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.profile_btn:hover {
+    color: #ff6b81; 
+}
+
+.profile_btn i {
+    background: #f5f5f5;
+    padding: 8px;
+    border-radius: 50%;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+}
+
+.checkout-container {
+      max-width: 60%;
+      margin-top: 90px ;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 90px;
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    
+    h2 {
+      border-bottom: 2px solid #eee;
+      font-size: 30px;
+      color:#000000;
+      font-weight: bolder
+;
+
+    }
+    .section {
+      margin-bottom: 10px;
+    }
+
+
+    .section-total-box{
+      font-size: 20px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+    }
+    table th, table td {
+      border: 1px solid #ddd;
+      padding: 10px;
+      text-align: center;
+    }
+    table th {
+      background: #f4f4f4;
+    }
+    .total-box {
+      text-align: right;
+      margin-top: 15px;
+      font-size: 16px;
+    }
+    .total-box strong {
+      font-size: 18px;
+    }
+    .btn {
+      background: #4CAF50;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 15px;
+      font-size: 16px;
+      width: 100%;
+    }
+    .btn:hover {
+      background: #45a049;
+    }
+    .edit-btn {
+      background: #3498db;
+      color: white;
+      border: none;
+      padding: 6px 12px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .edit-btn:hover {
+      background: #2980b9;
+    }
+    /* Toggle buttons */
+    .option-group {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-top: 10px;
+    }
+    .option-btn {
+      flex: 1;
+      min-width: 120px;
+      padding: 10px;
+      border: 2px solid #ccc;
+      border-radius: 6px;
+      background: #fff;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+    .option-btn:hover {
+      border-color: #888;
+    }
+    .option-btn.active {
+      border-color: #4CAF50;
+      background: #e8f9e8;
+      font-weight: bold;
+    }
+
+
+/*Credit card modal*/
+
+.modal-overlay {
+  display: none; 
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.4);
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+/* Centered payment box (already good) */
+.payment-box {
+  background: white;
+  padding: 25px 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 400px;
+  position: relative; /* for close button */
+  z-index: 1000; /* above overlay */
+}
+    .payment-box h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    .payment-box label {
+      display: block;
+      margin-top: 12px;
+      font-weight: 600;
+      font-size: 14px;
+      color: #444;
+    }
+
+    .payment-box input {
+      width: 100%;
+      padding: 10px;
+      margin-top: 6px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 14px;
+    }
+
+    .payment-box button {
+      margin-top: 20px;
+      width: 100%;
+      padding: 12px;
+      background: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .payment-box button:hover {
+      background: #45a049;
+    }
+
+    input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+.close-btn {
+  position: absolute;
+  top: 12px;
+  right: 18px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #aaa;
+  cursor: pointer;
+}
+
+.close-btn:hover {
+  color: #000;
+}

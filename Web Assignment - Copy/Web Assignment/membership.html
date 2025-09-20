@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Membership - Sweet Scoops</title>
+    <link rel="stylesheet" href="style/memberstyle.css">
+</head>
+<body>
+
+    <!-- ===================== HEADER ===================== -->
+    <header>
+        <div class="container">
+            <h1>Sweet Scoops Membership</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="membership.html">Membership</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!-- ================= END HEADER ==================== -->
+
+
+
+    <!-- ================== MEMBERSHIP SECTION ================== -->
+    <section class="membership-section">
+        <div class="container">
+
+            <!-- ================= MEMBERSHIP CARD ================= -->
+            <div class="membership-card">
+
+                <!-- Membership Header -->
+                <h2>Join Sweet Scoops Today!</h2>
+                <p>Sign up to become a valued member of Sweet Scoops. Enjoy exclusive perks, promotions, and be the first to taste new flavors!</p>
+                <p>Our membership program is free to join and gives you instant access to discounts, birthday treats, and much more.</p>
+
+                <!-- ================= FORM ================= -->
+                <form id="membershipForm">
+
+                    <!-- First Name -->
+                    <label for="firstName">First Name</label>
+                    <input type="text" id="firstName" name="firstName" placeholder="Enter your first name" required>
+
+                    <!-- Last Name -->
+                    <label for="lastName">Last Name</label>
+                    <input type="text" id="lastName" name="lastName" placeholder="Enter your last name" required>
+
+                    <!-- Email Address -->
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+                    <!-- Phone Number -->
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+
+                    <!-- Date of Birth -->
+                    <label for="dob">Date of Birth</label>
+                    <input type="date" id="dob" name="dob" required>
+
+                    <!-- Membership Type -->
+                    <label for="membershipType">Membership Type</label>
+                    <select id="membershipType" name="membershipType" required>
+                        <option value="">Select Membership</option>
+                        <option value="basic">Basic</option>
+                        <option value="premium">Premium</option>
+                        <option value="vip">VIP</option>
+                    </select>
+
+                    <!-- Newsletter Subscription -->
+                    <label>
+                        <input type="checkbox" name="newsletter" checked> Subscribe to Newsletter
+                    </label>
+
+                    <!-- Flavor Preferences -->
+                    <label for="flavors">Favorite Ice Cream Flavors (Optional)</label>
+                    <textarea id="flavors" name="flavors" placeholder="List your favorite flavors..."></textarea>
+
+                    <!-- Submit Button -->
+                    <button type="submit">Join Now</button>
+
+                </form>
+                <!-- ================= END FORM ================= -->
+
+
+
+                <!-- ================= MEMBERSHIP INFO ================= -->
+                <div class="membership-info">
+                    <h3>Membership Benefits</h3>
+
+                    <ul>
+                        <li>Exclusive discounts on every purchase</li>
+                        <li>Early access to new ice cream flavors</li>
+                        <li>Birthday rewards and free scoops</li>
+                        <li>Members-only events and promotions</li>
+                        <li>Monthly newsletter with insider news</li>
+                    </ul>
+
+                    <p>Joining is easy, and you can start enjoying your benefits immediately after signing up.</p>
+
+                    <p>Sweet Scoops values each member and continually adds more perks based on your feedback.</p>
+                </div>
+                <!-- ================ END MEMBERSHIP INFO ================= -->
+
+
+
+                <!-- ================= TERMS AND CONDITIONS ================= -->
+                <div class="membership-terms">
+                    <h3>Terms and Conditions</h3>
+                    <ul>
+                        <li>Membership is free for all participants.</li>
+                        <li>Benefits are non-transferable and for personal use only.</li>
+                        <li>Discounts cannot be combined with other promotions.</li>
+                        <li>Sweet Scoops reserves the right to modify benefits at any time.</li>
+                        <li>Membership may be terminated if fraudulent activity is detected.</li>
+                        <li>Birthday rewards must be claimed during the birthday month.</li>
+                    </ul>
+
+                    <p>Please read the terms carefully to ensure you enjoy all your benefits without issues.</p>
+                </div>
+                <!-- ================ END TERMS AND CONDITIONS ================= -->
+
+            </div>
+            <!-- ================= END MEMBERSHIP CARD ================= -->
+
+        </div>
+    </section>
+    <!-- ================= END MEMBERSHIP SECTION ================= -->
+
+
+
+    <!-- ================= FOOTER ================= -->
+    <footer>
+        <p>&copy; 2025 Sweet Scoops. All Rights Reserved.</p>
+    </footer>
+    <!-- ================= END FOOTER ================= -->
+
+
+
+    <!-- ================= SCRIPT ================= -->
+    <script src="Javascripts/memberscript.js"></script>
+    <!-- ================= END SCRIPT ================= -->
+
+</body>
+</html>

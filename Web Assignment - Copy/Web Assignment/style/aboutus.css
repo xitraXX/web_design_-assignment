@@ -1,0 +1,325 @@
+body {
+    background-color: #f1ebdf;
+    height: 100vh; 
+    background-size: cover;
+    background-position: center;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+
+}
+
+a {
+    text-decoration: none;
+    color: #964414;
+    font-size: 1.5rem;
+
+
+}
+
+a:hover {
+    color: #c67c51;
+    cursor: pointer;
+}
+
+/* HEADER */
+header {
+    position: relative;
+
+
+}
+
+.navbar {
+    width: 100%;
+    height: 60px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #f6ccc7;
+    margin: 0%;
+    padding: 0%;
+
+
+}
+
+.navbar .logo a {
+    font-size: 2rem;
+    font-weight: bold;
+    font-family: 'titan one';
+    margin-left: 10px;
+
+}
+
+.navbar .links {
+    display: flex;
+    gap: 4rem;
+    position: relative;
+    right: 100px;
+    font-family: 'titan one';
+    top: 5px;
+
+}
+
+.navbar .toggle_btn {
+    color: #bd6a34;
+    cursor: pointer;
+    display: none;
+
+}
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* space between profile icon and button */
+}
+.profile_btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px; /* small spacing from links */
+    font-size: 20px;
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.profile_btn:hover {
+    color: gray; 
+    transform: scale(1.15);
+}
+
+.profile_btn i {
+    background: #f5f5f5;
+    padding: 8px;
+    border-radius: 50%;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+}
+/* Oval join button */
+.join-btn {
+    display: inline-block;
+    background-color: #ff6f91;
+    color: white;
+    padding: 8px 20px;
+    border-radius: 50px; /* makes it oval/pill shaped */
+    font-weight :lighter;
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: 0.3s ease;
+    font-family: 'titan one';
+}
+
+.join-btn:hover {
+    background-color: #e65b7c;
+    color: white;
+    transform: scale(1.05);
+}
+
+.about-section {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.about-section h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: #964414;
+  font-family: 'titan one';
+  font-weight: lighter;
+}
+
+.about-section p {
+  max-width: 800px;
+  margin: 10px auto;
+  line-height: 1.6;
+  font-size: 18px;
+  color: #bd6a34;
+}
+
+
+.team-section {
+  background: #f6ccc7;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.team-section h2 {
+  font-size: 30px;
+  margin-bottom: 40px;
+  color: #964414;
+  font-family: 'titan one';
+  font-weight: lighter;
+}
+
+.team-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.team-member {
+  background: #f1ebdf;
+  border-radius: 15px;
+  padding: 20px;
+  width: 250px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.team-member img {
+  width: 100%;
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+
+.team-member h3 {
+  margin: 10px 0 5px;
+  color: #333;
+}
+
+.team-member p {
+  color: #777;
+  font-size: 14px;
+}
+
+.newsletterdrip {
+    position: flex;
+    flex-direction: row
+}
+
+.pinkdrip3 {
+    position: relative;
+    right: 400px;
+    animation: dripAnimation 2s infinite;
+}
+
+.pinkdrip4 {
+    position: absolute;
+    right: 200px;
+    animation: dripAnimation 1.9s infinite;
+    animation-delay: 1s;
+}
+
+@keyframes dripAnimation {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+.newsletter {
+    font-family: 'titan one';
+    font-size: 50px;
+    color: #7e3d12;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: #eee3dd;
+    padding-bottom: 20px;
+}
+
+.newslettercontents {
+    margin-top: -115px;
+}
+
+.footerquote2 {
+    font-size: 30px;
+    font-family: 'Tenali Ramakrishna'
+}
+
+.newsletter2-btn:hover {
+    background-color: #7e3d12;
+    color: #eee3dd;
+}
+
+footer {
+    padding: 20px;
+    text-align: center;
+    padding-bottom: 100px;
+}
+
+.newsletter-signup {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background: #f6ccc7;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px #d8a29c;
+}
+
+.newsletter-signup h3 {
+    margin-bottom: 10px;
+}
+
+.newsletter-signup p {
+    margin-bottom: 20px;
+}
+
+.newsletter-signup form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.newsletter-signup input[type="email"] {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #f6ccc7;
+    border-radius: 5px;
+    flex-grow: 1;
+    max-width: 300px;
+}
+
+.newsletter-signup button {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #bd6a34;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'titan one';
+}
+
+.newsletter-signup button:hover {
+    background-color: #964414;
+}
+
+.newsletter-signup a {
+    color: #f6ccc7;
+    text-decoration: none;
+}
+
+.newsletter-signup a:hover {
+    text-decoration: underline;
+}
+
+.holdicecream1 {
+    position: absolute;
+    left: 0;
+    width: 290px;
+    overflow: hidden;
+    margin-top: -50px;
+}
+
+.holdicecream2 {
+    position: absolute;
+    right: 0px;
+    width: 340px;
+    overflow: hidden;
+    margin-top: 10px;
+}

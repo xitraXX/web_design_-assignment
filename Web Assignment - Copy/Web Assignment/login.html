@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="resource/iconlogo.png">
+    <title>Login</title>
+    <link rel="stylesheet" href="style/login.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600&family=Titan+One&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <main>
+      <div class="login-container">
+        <h1>Welcome Back 🍦</h1>
+        <p class="subtitle">Log in to get your sweet scoops!</p>
+
+        <form class="login-form" id="loginForm">
+          <input type="text" id="username" placeholder="Username" required />
+          <input
+            type="password"
+            id="password"
+            placeholder="Password"
+            required
+          />
+          <button type="submit">Login</button>
+        </form>
+
+        <p class="form-footer">
+          <a href="forget_password.html">Forgot Password?</a>
+        </p>
+
+        <p class="form-footer">
+          Don’t have an account? <a href="signup.html">Sign up</a>
+        </p>
+      </div>
+    </main>
+
+    <footer>
+      <p
+        style="
+          text-align: center;
+          font-family: 'Plus Jakarta Sans';
+          font-size: 14px;
+          margin-top: -70px;
+        "
+      >
+        © 2025 Sweet Scoops! All rights reserved.
+      </p>
+    </footer>
+
+    <script>
+      document
+        .getElementById("loginForm")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+
+          const username = document.getElementById("username").value.trim();
+          const password = document.getElementById("password").value.trim();
+
+          const savedUser = JSON.parse(localStorage.getItem("user"));
+
+          if (!savedUser) {
+            alert("No account found. Please sign up first!");
+            return;
+          }
+
+          if (
+            (username === savedUser.email || username === savedUser.fullname) &&
+            password === savedUser.password
+          ) {
+            alert("Login successful! Welcome back, " + savedUser.fullname);
+            window.location.href = "index.html";
+          } else {
+            alert("Invalid username/email or password. Try again!");
+          }
+        });
+    </script>
+    <script
+  async
+  data-id="9551828371"
+  id="chtl-script"
+  data-display="bubble"
+  type="text/javascript"
+  src="https://chatling.ai/js/embed.js"
+></script>
+  </body>
+</html>

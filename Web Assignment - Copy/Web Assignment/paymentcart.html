@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="resource/iconlogo.png">
+    <title>Check Out</title>
+    <link rel="stylesheet" href="style/paymentcart.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Titan+One&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tenali+Ramakrishna&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo"> <a href="index.html">Sweet Scoops!</a></div>
+            <ul class="links">
+                <li><a href="product.html">Products</a></li>
+                <li><a href="aboutus.html">About Us</a></li>
+                <li><a href="visitus.html">Visit Us</a></li>
+                <li><a href="recipes.html">Recipes</a></li>
+                <li><a href="FAQ.html">FAQ</a></li>
+            </ul>
+            <a href="login.html" class="profile_btn">
+             <i class="fa-solid fa-user"></i>
+             </a>
+            </div>
+        </div>
+        
+    </header>
+
+    <div class="checkout-container">
+
+
+  <div class="section">
+    <h2>Delivery Address</h2>
+    <p id="addressText">123 Main Street, New York, NY</p>
+    <button class="edit-btn" onclick="editAddress()">Change / Edit Address</button>
+  </div>
+
+  
+  <div class="section">
+    <h2>Products Ordered</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Product</th>
+          <th>Unit Price ($)</th>
+          <th>Quantity</th>
+          <th>Item Subtotal ($)</th>
+        </tr>
+      </thead>
+      <tbody id="cartBody"></tbody>
+    </table>
+  </div>
+
+  
+  <div class="section">
+    <h2>Shipping Option</h2>
+    <div class="option-group" id="shippingOptions">
+      <button class="option-btn active" data-value="pickup">Pickup (Free)</button>
+      <button class="option-btn" data-value="delivery">Delivery ($5.00)</button>
+    </div>
+  </div>
+
+  
+  <div class="section">
+    <h2>Payment Method</h2>
+    <div class="option-group" id="paymentOptions">
+      <button class="option-btn active" data-value="credit">Credit Card</button>
+      <button class="option-btn" data-value="cod">Cash on Delivery</button>
+    </div>
+  </div>
+
+  
+  <div class="section-total-box">
+    <p>Product Subtotal: $<span id="productSubtotal">0.00</span></p>
+    <p>Shipping Fee: $<span id="shippingFee">0.00</span></p>
+    <p><strong>Total: $<span id="orderTotal">0.00</span></strong></p>
+  </div>
+
+  
+  <button class="btn" onclick="placeOrder()">Place Order</button>
+
+
+<div id="paymentModal" class="modal-overlay">
+  <div class="payment-box">
+    <span class="close-btn" onclick="closeModal()">&times;</span>
+    <h2>Credit Card Payment</h2>
+    <form id="paymentForm">
+      <label for="name">Cardholder Name</label>
+      <input type="text" id="name" required>
+
+      <label for="cardNumber">Card Number</label>
+      <input type="text" id="cardNumber" placeholder="1234 5678 9012 3456" maxlength="19" required>
+
+      <label for="expiry">Expiry Date</label>
+      <input type="month" id="expiry" required>
+
+      <label for="cvv">CVV</label>
+      <input type="password" id="cvv" maxlength="3" required>
+
+      <button type="submit" >Pay Now</button>
+    </form>
+  </div>
+</div>
+
+
+<script>
+  let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+  let selectedShipping = "pickup";
+  let selectedPayment = "credit";
+
+  function renderCart() {
+    let cartBody = document.getElementById("cartBody");
+    let subtotal = 0;
+    cartBody.innerHTML = "";
+
+    cart.forEach(item => {
+      let itemTotal = item.price * item.quantity;
+      subtotal += itemTotal;
+
+      let row = document.createElement("tr");
+      row.innerHTML = `
+        <td>${item.name}</td>
+        <td>${item.price.toFixed(2)}</td>
+        <td>${item.quantity}</td>
+        <td>${(item.price * item.quantity).toFixed(2)}</td>
+      `;
+      cartBody.appendChild(row);
+    });
+
+    document.getElementById("productSubtotal").textContent = subtotal.toFixed(2);
+    updateTotal();
+  }
+
+  function updateTotal() {
+    let productSubtotal = parseFloat(document.getElementById("productSubtotal").textContent);
+    let shippingFee = (selectedShipping === "delivery") ? 5.00 : 0.00;
+
+    document.getElementById("shippingFee").textContent = shippingFee.toFixed(2);
+    document.getElementById("orderTotal").textContent = (productSubtotal + shippingFee).toFixed(2);
+  }
+
+  function editAddress() {
+    let newAddress = prompt("Enter new delivery address:", document.getElementById("addressText").textContent);
+    if (newAddress && newAddress.trim() !== "") {
+      document.getElementById("addressText").textContent = newAddress.trim();
+    }
+  }
+
+
+function openModal() {
+  const modal = document.getElementById("paymentModal");
+  modal.style.display = "flex"; 
+}
+function closeModal() {
+  document.getElementById("paymentModal").style.display = "none";
+}
+
+window.addEventListener("click", function(event) {
+  const modal = document.getElementById("paymentModal");
+  const box = document.querySelector(".payment-box");
+  if (event.target === modal) {
+    closeModal();
+  }
+}
+);
+
+document.getElementById("paymentForm").addEventListener("submit", payNow);
+
+function payNow(event) {
+  event.preventDefault(); 
+
+  const orderDetails = JSON.parse(localStorage.getItem("pendingOrder"));
+
+  alert(`💳 Payment Successful! 
+
+Order Summary:
+Delivery Address: ${orderDetails.address}
+Shipping: ${orderDetails.shipping === "delivery" ? "Delivery" : "Pickup"}
+Payment Method: Credit Card
+Total: $${orderDetails.total}`);
+
+ 
+  localStorage.removeItem("cart"); 
+  localStorage.removeItem("pendingOrder");
+  localStorage.clear();
+
+ 
+  window.location.href = "index.html";
+}
+
+  function placeOrder() {
+    let address = document.getElementById("addressText").textContent;
+    let total = document.getElementById("orderTotal").textContent;
+
+    if (selectedPayment === "credit") {
+      
+      const orderDetails = {
+        address: address,
+        shipping: selectedShipping,
+        total: total
+      };
+      localStorage.setItem("pendingOrder", JSON.stringify(orderDetails));
+
+    
+        openModal();
+        
+
+    } 
+    else {
+      
+      alert(`✅ Order placed successfully!
+
+Delivery Address: ${address}
+Shipping: ${selectedShipping === "delivery" ? "Delivery" : "Pickup"}
+Payment Method: Cash on Delivery
+Total: $${total}`);
+
+   
+      localStorage.removeItem("cart");
+      window.location.href = "index.html";
+    }
+  }
+
+
+  function setupOptionButtons(groupId, callback) {
+    const buttons = document.querySelectorAll(`#${groupId} .option-btn`);
+    buttons.forEach(btn => {
+      btn.addEventListener("click", () => {
+        buttons.forEach(b => b.classList.remove("active"));
+        btn.classList.add("active");
+        callback(btn.getAttribute("data-value"));
+      });
+    });
+  }
+
+  setupOptionButtons("shippingOptions", value => {
+    selectedShipping = value;
+    updateTotal();
+  });
+
+  setupOptionButtons("paymentOptions", value => {
+    selectedPayment = value;
+  });
+
+  renderCart();
+</script>
+</body>
+</html>

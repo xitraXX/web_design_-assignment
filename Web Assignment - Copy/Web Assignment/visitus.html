@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>    
+    </style>
+    <meta charset=" UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="resource/iconlogo.png">
+    <title>Visit Us</title>
+    <link rel="stylesheet" href="style/visitus.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Titan+One&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tenali+Ramakrishna&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    </style>
+
+</head>
+
+
+
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo"> <a href="index.html">Sweet Scoops!</a></div>
+            <ul class="links">
+                <li><a href="product.html">Products</a></li>
+                <li><a href="aboutus.html">About Us</a></li>
+                <li><a href="visitus.html">Visit Us</a></li>
+                <li><a href="recipes.html">Recipes</a></li>
+                <li><a href="FAQ.html">FAQ</a></li>
+            </ul>
+             <div class="nav-actions">
+            <a href="membership.html" class="join-btn">Join Membership</a>
+            <a href="login.html" class="profile_btn">
+            <i class="fa-solid fa-user"></i>
+    </a>
+</div>
+    </header>
+    <main>
+
+
+    </main>
+    <script>
+        const toggle_btn = document.querySelector('.toggle_btn')
+        const toggle_btnIcon = document.querySelector('.toggle_btn i')
+        const dropdown_menu = document.querySelector('.dropdown_menu')
+
+        toggle_btn.onclick = function () {
+            dropdown_menu.classList.toggle('open')
+            const isOpen = dropdown_menu.classList.contains('open')
+            toggle_btnIcon.classList = isOpen
+                ? 'fa-solid fa-xmark'
+                : 'fa-solid fa-ice-cream'
+        }
+    </script>
+
+    <div class="header1">
+        <div class="headerquote1">Want a taste?</div>
+        <div class="headerquote2">Come Find Us In Store</div>
+        <a href="visitus.html" class="button">YUM!</a>
+
+        <div class="headerpicture">
+            <img src="resource/delicious-ice-cream-melting.png" , width="600px">
+        </div>
+    </div>
+    <div class="aboutus">
+        <div class="aboutustitle">Locations!
+        </div>
+        <div class="aboutusinfo">
+            <div class="aboutustext">
+                <P>Street:  No. 1 1St Floor Arked Padungan Jln Song Thian CheokSarawak
+                    <br>City: Kuching
+                    <br>State/province/area: Sarawak
+                     <br> Phone number:  08225-5880
+                     <br>Zip code:  93100</P> <br>
+
+                     <p> Street:  187 Jalan Simbang Taman Perling Tampoi
+                        <br>City:   Johor Bahru
+                        <br>State/province/area:    Johor
+                       <br> Phone number:  (607) 2340627
+                        <br>Zip code:  81200 </p>
+                        <h2>Or ring us at:</h2>
+                         <p>+60139998229 <br>
+                                +60354250388 <br>
+                                +60326948284 <br></p> 
+
+                <br><H3>WANNA FIND OUR FLAVOURS EARLY?</H3> </br>
+            </div>
+
+            
+
+        </div>
+
+    </div>
+    <div class="bestsellerpage">
+        <div class="pinkdrip">
+            <img src="resource/pink drip 1.png" , width="20%" , class="pinkdrip1">
+            <img src="resource/pink drip 2.png" , width="10%" , class="pinkdrip2">
+
+        </div>
+    </div>
+    <div class="bestsellers"> 
+        <div class="contact-container">
+            <form action="" class="contact-left">
+                
+                <div class="contact-left-title">
+                    <h6>Want a taste?</h6>
+                    <hr>
+                </div>
+                <input type="text" name="name" placeholder="Your Name" class="contact-inputs" required>
+                <input type="email" name="email" placeholder="Your email" class="contact-inputs" required>
+                <textarea name="message" placeholder="Your Message" class="contact-inputs" required></textarea>
+                <button onclick="submitclick()" type="button">Submit <img src="resource/arrow_icon.png" alt="" ></button>
+            </form>
+           
+        </div>
+
+
+    </div>
+    </div>
+    <div class="footer">
+        <div class="footercontents">
+            <div class="footerhead">Still hungry for more?</div>
+            <div class="icon-row">
+                <div class="icon-item">
+                    <div class="icon-container">
+                        <a href="aboutus.html"><img src="resource/peach ice cream.jpg" alt="AboutUs" width="600"></a>
+                    </div>
+                    <p>About Us</p>
+                </div>
+                <div class="icon-item">
+                    <div class="icon-container">
+                        <a href="recipes.html"><img src="resource/ice cream scoops.jpg" alt="Recipes" width="600"></a>
+                    </div>
+                    <p>Recipes</p>
+                </div>
+                <div class="icon-item">
+                    <div class="icon-container">
+                        <a href="product.html"><img src="resource/ice cream flavours.jpg" alt="VisitUs" width="600"></a>
+                    </div>
+                    <p>Products</p>
+
+
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="newsletter">
+            <div class="newsletterdrip">
+                <img src="resource/pink drip 3.png" , width="25%" , class="pinkdrip3">
+                <img src="resource/pink drip 4.png" , width="20%" , class="pinkdrip4">
+
+                <div class="newslettercontents">
+                    <div class="footerquote1">Get the latest scoop,</div>
+                    <div class="footerquote2">Join our newsletter!</div>
+                    <footer>
+                        <div class="newsletter-signup">
+                            <form action="none" method="POST">
+                                <input type="email" name="email" style="background-color: #f1ebdf"
+                                    placeholder="Enter your email here! :D" required>
+                                <button onclick="newsubmit()" type="button">Submit</button>
+                            </form>
+                        </div>
+                    </footer>
+                </div>
+            </div>
+            <img src="resource/holdingicecream1.png" class="holdicecream1">
+            <img src="resource/icecreamhold.png" class="holdicecream2">
+        </div>
+
+        <script
+  async
+  data-id="9551828371"
+  id="chtl-script"
+  data-display="bubble"
+  type="text/javascript"
+  src="https://chatling.ai/js/embed.js"
+></script>
+<script>
+   function newsubmit(){
+
+        alert("🎉 Thank you for subscribing to our newsletter! 🍦");
+
+        window.location.href = "visitus.html"; 
+   }
+
+   function submitclick() {
+
+    alert("🎉 Thank you for submitting!🎉\n🍦We will get back to you soon.🍦");
+
+        window.location.href = "visitus.html";
+
+   }
+
+</script>
+</body>
+
+</html>

@@ -1,0 +1,196 @@
+body {
+    background-color: #f1ebdf;
+    height: 100vh; 
+    background-size: cover;
+    background-position: center;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+
+}
+
+a {
+    text-decoration: none;
+    color: #964414;
+    font-size: 1.5rem;
+
+
+}
+
+a:hover {
+    color: #c67c51;
+    cursor: pointer;
+}
+
+/* HEADER */
+header {
+    position: relative;
+
+
+}
+
+.navbar {
+    width: 100%;
+    height: 60px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #f6ccc7;
+    margin: 0%;
+    padding: 0%;
+
+
+}
+
+.navbar .logo a {
+    font-size: 2rem;
+    font-weight: bold;
+    font-family: 'titan one';
+    margin-left: 10px;
+
+}
+
+.navbar .links {
+    display: flex;
+    gap: 4rem;
+    position: relative;
+    right: 100px;
+    font-family: 'titan one';
+    top: 5px;
+
+
+
+
+}
+.navbar .toggle_btn {
+    color: #bd6a34;
+    cursor: pointer;
+    display: none;
+
+}
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* space between profile icon and button */
+}
+.profile_btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px; /* small spacing from links */
+    font-size: 20px;
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.profile_btn:hover {
+    color: gray; 
+    transform: scale(1.15);
+}
+
+.profile_btn i {
+    background: #f5f5f5;
+    padding: 8px;
+    border-radius: 50%;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+}
+/* Oval join button */
+.join-btn {
+    display: inline-block;
+    background-color: #ff6f91;
+    color: white;
+    padding: 8px 20px;
+    border-radius: 50px; /* makes it oval/pill shaped */
+    font-weight :lighter;
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: 0.3s ease;
+    font-family: 'titan one';
+}
+
+.join-btn:hover {
+    background-color: #e65b7c;
+    color: white;
+    transform: scale(1.05);
+}
+
+
+/* FAQ Section */
+.faq-section {
+    background-color: #ffe7b6ad;
+    padding: 40px 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 40px auto;
+    width: 80%;
+    max-width: 900px;
+    border-radius: 10px;
+}
+
+.faq-section h2 {
+    font-size: 1.8rem;
+    color: #964414;
+    margin-bottom: 20px;
+    text-align: center;
+    font-family: 'titan one';
+    font-weight: lighter;
+}
+
+.faq-item {
+    margin-bottom: 20px;
+}
+
+.faq-question {
+    background-color: #b6701a;
+    color: white;
+    padding: 12px;
+    border: none;
+    font-size: 1.1rem;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-radius: 5px;
+}
+
+.faq-question:hover {
+    background-color: #ff9720;
+}
+
+.faq-answer {
+    display: none;
+    padding: 15px;
+    background-color: #f7f7f7;
+    border-radius: 5px;
+    margin-top: 10px;
+    font-size: 1rem;
+    color: #555;
+}
+
+.faq-answer a {
+    color: #ff8c00;
+    text-decoration: none;
+}
+
+.faq-answer a:hover {
+    text-decoration: underline;
+}
+
+/* Footer */
+footer {
+    background-color: #ff8c009a;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+

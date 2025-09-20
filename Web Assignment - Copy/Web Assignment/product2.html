@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/x-icon" href="resource/iconlogo.png">
+  <title>Product page2</title>
+  <link rel="stylesheet" href="style/product.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;400;600;800&family=Titan+One&family=Tenali+Ramakrishna&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header>
+  <div class="navbar">
+            <div class="logo"> <a href="index.html">Sweet Scoops!</a></div>
+            <ul class="links">
+                <li><a href="product.html">Products</a></li>
+                <li><a href="aboutus.html">About Us</a></li>
+                <li><a href="visitus.html">Visit Us</a></li>
+                <li><a href="recipes.html">Recipes</a></li>
+                <li><a href="FAQ.html">FAQ</a></li>
+            </ul>
+             <div class="navbar-right">
+             <div class="cart-container">
+             <a href="productcart.html">
+            <i class="fa-solid fa-basket-shopping"></i>
+            </a>
+            <span class="cart-count" id="cartCount">0</span>
+            </div>
+            <a href="login.html" class="profile_btn">
+            <i class="fa-solid fa-user"></i>
+        </a>
+    </div>
+</header>
+
+
+<section>
+  <h2>More Ice Cream Flavors</h2>
+  <div class="products">
+    
+   
+    <div class="product-card">
+      <img src="resource/Belgian Chocolate.png" alt="Belgian chocolate" class="product-img">
+      <h3>Belgian chocolate</h3>
+      <p>Smooth,rich and indulgent a chocolate lover’s dream!🍫</p>
+      <p><strong>RM11.00 / Tub</strong></p>
+      <a href="#" class="btn" onclick="addToCart('Belgian chocolate', 11)">Add to Cart</a>
+    </div>
+
+    
+    <div class="product-card">
+      <img src="resource/Blood Orange Sorbet.png" alt="Blood Orange Sorbet" class="product-img">
+      <h3>Blood Orange Sorbet</h3>
+      <p>Zesty, refreshing, and bursting with citrus sunshine! 🍊✨</p>
+      <p><strong>RM11.00 / Tub</strong></p>
+      <a href="#" class="btn" onclick="addToCart('Blood Orange Sorbet', 11)">Add to Cart</a>
+    </div>
+
+    
+    <div class="product-card">
+      <img src="resource/Cherries and Cream.png" alt="Cherries and Cream" class="product-img">
+      <h3>Cherries and Cream</h3>
+      <p>Sweet cherries swirled with silky cream a classic delight! 🍒🥛</p>
+      <p><strong>RM11.00 / Tub</strong></p>
+      <a href="#" class="btn" onclick="addToCart('Cherries and Cream', 11)">Add to Cart</a>
+    </div>
+
+  
+    <div class="product-card">
+      <img src="resource/Chocolate Brownie.png" alt="Chocolate Brownie" class="product-img">
+      <h3>Chocolate Brownie</h3>
+      <p>Fudgy brownie chunks in rich chocolate bliss! 🍫🍪</p>
+      <p><strong>RM13.00 / Tub</strong></p>
+      <a href="#" class="btn" onclick="addToCart('Chocolate Brownie', 13)">Add to Cart</a>
+    </div>
+
+    
+    <div class="product-card">
+      <img src="resource/Flat White Coffee.png" alt="Flat White Coffee" class="product-img">
+      <h3>Flat White Coffee</h3>
+      <p>Smooth espresso swirled with creamy perfection! ☕✨</p>
+      <p><strong>RM13.00 / Tub</strong></p>
+      <a href="#" class="btn" onclick="addToCart('Flat White Coffee', 13)">Add to Cart</a>
+    </div>
+
+   
+    <div class="product-card">
+      <img src="resource/Honeycomb.png" alt="Honeycomb" class="product-img">
+      <h3>Honeycomb</h3>
+      <p>Golden crunch meets creamy sweetness! 🍯✨</p>
+      <p><strong>RM15.00 / Tub</strong></p>
+      <a href="#" class="btn" onclick="addToCart('Honeycomb', 15)">Add to Cart</a>
+    </div>
+
+    
+    <div class="product-card">
+      <img src="resource/Mint Chocolate.png" alt="Mint Chocolate" class="product-img">
+      <h3>Mint Chocolate</h3>
+      <p>Cool mint swirled with rich chocolate chips! 🌿🍫</p>
+      <p><strong>RM13.00 / Tub</strong></p>
+      <a href="#" class="btn" onclick="addToCart('Mint Chocolate', 13)">Add to Cart</a>
+    </div>
+
+    
+    <div class="product-card">
+      <img src="resource/Salted Caramel.png" alt="Salted Caramel" class="product-img">
+      <h3>Salted Caramel</h3>
+      <p>Sweet caramel with a hint of sea salt bliss! 🧂🍯</p>
+      <p><strong>RM16.00 / Tub</strong></p>
+      <a href="#" class="btn" onclick="addToCart('Salted Caramel', 16)">Add to Cart</a>
+    </div>  
+
+    
+    <div class="product-card">
+      <img src="resource/Vanilla Clotted Cream.png" alt="Vanilla Clotted Cream" class="product-img">
+      <h3>Mint Chocolate</h3>
+      <p>Classic vanilla with a luxuriously creamy twist! 🌼🍦</p>
+      <p><strong>RM13.00 / Tub</strong></p>
+      <a href="#" class="btn" onclick="addToCart('Vanilla Clotted Cream', 13)">Add to Cart</a>
+    </div>
+
+  </div>
+
+
+<div class="pagination">
+  <a href="product.html"><i class="fa-solid fa-chevron-left"></i></a>
+  <a href="product.html">1</a>
+  <a href="product2.html" class="active">2</a>
+  <a href="#" class="disabled"><i class="fa-solid fa-chevron-right"></i></a>
+</div>
+</section>
+
+<script>
+  
+  let cart = JSON.parse(localStorage.getItem("cart")) || [];
+  updateCartCount();
+
+  function addToCart(name, price) {
+    let existingItem = cart.find(item => item.name === name);
+    if (existingItem) {
+      existingItem.quantity++;
+    } else {
+      cart.push({ name, price, quantity: 1 });
+    }
+    localStorage.setItem("cart", JSON.stringify(cart));
+    updateCartCount();
+  }
+
+  function updateCartCount() {
+    const cartCountEl = document.getElementById("cartCount");
+    if (cartCountEl) {
+      cartCountEl.innerText = cart.reduce((sum, item) => sum + item.quantity, 0);
+    }
+  }
+</script>
+<script
+  async
+  data-id="9551828371"
+  id="chtl-script"
+  data-display="bubble"
+  type="text/javascript"
+  src="https://chatling.ai/js/embed.js"
+></script>
+</body>
+</html>

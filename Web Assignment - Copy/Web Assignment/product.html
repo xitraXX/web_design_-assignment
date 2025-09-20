@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/x-icon" href="resource/iconlogo.png">
+  <title>Product page1</title>
+  <link rel="stylesheet" href="style/product.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Titan+One&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tenali+Ramakrishna&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+
+<header>
+  <div class="navbar">
+            <div class="logo"> <a href="index.html">Sweet Scoops!</a></div>
+            <ul class="links">
+                <li><a href="product.html">Products</a></li>
+                <li><a href="aboutus.html">About Us</a></li>
+                <li><a href="visitus.html">Visit Us</a></li>
+                <li><a href="recipes.html">Recipes</a></li>
+                <li><a href="FAQ.html">FAQ</a></li>
+            </ul>
+             <div class="navbar-right">
+             <div class="cart-container">
+             <a href="productcart.html">
+            <i class="fa-solid fa-basket-shopping"></i>
+            </a>
+            <span class="cart-count" id="cartCount">0</span>
+            </div>
+            <a href="login.html" class="profile_btn">
+            <i class="fa-solid fa-user"></i>
+        </a>
+    </div>
+</header>
+
+
+
+  
+  <section>
+    <h2>Our Ice Cream Flavors</h2>
+    <div class="products">
+      
+      <div class="product-card">
+        <img src="resource/vanilla_icecream.jpg" alt="Vanilla Ice Cream" width="250">
+        <h3>Classic Vanilla</h3>
+        <p>Rich and creamy vanilla, made with real vanilla beans.</p>
+        <p><strong>RM7.00 / scoop</strong></p>
+        <a href="#" class="btn" onclick="addToCart('Classic Vanilla', 7)">Add to Cart</a>
+      </div>
+
+      
+      <div class="product-card">
+        <img src="resource/chocolate_icecream.jpg" alt="Chocolate Ice Cream" width="250">
+        <h3>Chocolate Fudge</h3>
+        <p>Decadent chocolate with fudge swirls for true chocoholics.</p>
+        <p><strong>RM6.00 / scoop</strong></p>
+        <a href="#" class="btn" onclick="addToCart('Chocolate Fudge', 6)">Add to Cart</a>
+      </div>
+
+      
+      <div class="product-card">
+        <img src="resource/Strawberry_Icecream.jpg" alt="Strawberry Ice Cream" width="250">
+        <h3>Strawberry Bliss</h3>
+        <p>Fresh strawberries blended into creamy strawberry ice cream.</p>
+        <p><strong>RM6.00 / scoop</strong></p>
+        <a href="#" class="btn" onclick="addToCart('Very Berry', 6)">Add to Cart</a>
+      </div>
+
+      
+      <div class="product-card">
+        <img src="resource/mintchoco_icecream.jpg" alt="Mint Ice Cream" width="250">
+        <h3>Mint Choco Chip</h3>
+        <p>Cool mint ice cream with crunchy chocolate chips.</p>
+        <p><strong>RM8.00 / scoop</strong></p>
+        <a href="#" class="btn" onclick="addToCart('Minty Choc', 6)">Add to Cart</a>
+      </div>
+
+      
+      <div class="product-card">
+        <img src="resource/mango_icecream.jpg" alt="Mango Ice Cream" width="250">
+        <h3>Mango Ice Cream</h3>
+        <p>Tropical Sweetness in Every Scoop.</p>
+        <p><strong>RM6.00 / scoop</strong></p>
+        <a href="#" class="btn" onclick="addToCart('Tango Mango', 6)">Add to Cart</a>
+      </div>
+
+        
+      <div class="product-card">
+        <img src="resource/Pistachio_icecream.jpg" alt="Pistachio Ice Cream" width="250">
+        <h3>Pistachio Ice Cream</h3>
+        <p>A Scoop of Green Bliss</p>
+        <p><strong>RM6.00 / scoop</strong></p>
+        <a href="#" class="btn" onclick="addToCart('Pistachio', 6)">Add to Cart</a>
+      </div>
+      
+    </div>
+
+
+<div class="pagination">
+  <a href="#" class="disabled"><i class="fa-solid fa-chevron-left"></i></a>
+  <a href="product.html" class="active">1</a>
+  <a href="product2.html">2</a>
+  <a href="product2.html"><i class="fa-solid fa-chevron-right"></i></a>
+</div>
+  </section>
+  
+<script>
+
+  
+  let cart = JSON.parse(localStorage.getItem("cart")) || [];
+  updateCartCount();
+
+  function addToCart(name, price) {
+   
+    let existingItem = cart.find(item => item.name === name);
+    if (existingItem) {
+      existingItem.quantity++;
+    } else {
+      cart.push({ name: name, price: price, quantity: 1 });
+    }
+
+    
+    localStorage.setItem("cart", JSON.stringify(cart));
+
+    
+    updateCartCount();
+  }
+
+  function updateCartCount() {
+    document.getElementById("cartCount").innerText =
+      cart.reduce((sum, item) => sum + item.quantity, 0);
+  }
+
+</script>
+<script
+  async
+  data-id="9551828371"
+  id="chtl-script"
+  data-display="bubble"
+  type="text/javascript"
+  src="https://chatling.ai/js/embed.js"
+></script>
+</body>
+</html>
